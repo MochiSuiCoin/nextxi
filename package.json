@@ -1,0 +1,37 @@
+{
+  "name": "nextxi",
+  "version": "1.0.0",
+  "description": "Project structure for NextXI application.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "prisma generate",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:example": "tsx scripts/example-usage.ts",
+    "db:migrate": "prisma migrate dev",
+    "db:generate": "prisma generate",
+    "db:studio": "prisma studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/adapter-better-sqlite3": "^7.2.0",
+    "@prisma/client": "^7.2.0",
+    "better-sqlite3": "^12.5.0",
+    "next": "^16.1.1",
+    "prisma": "^7.2.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^17.2.3",
+    "tsx": "^4.21.0",
+    "typescript": "5.9.3"
+  }
+}

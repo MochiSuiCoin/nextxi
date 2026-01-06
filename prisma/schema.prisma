@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Programme {
+  id                Int     @id @default(autoincrement())
+  programmeName     String  @map("programme_name")
+  providerName      String  @map("provider_name")
+  sportType         String  @map("sport_type")
+  programmeType     String  @map("programme_type")
+  country           String
+  city              String?
+  agesMin           Int?    @map("ages_min")
+  agesMax           Int?    @map("ages_max")
+  gender            String?
+  level             String
+  boarding          String?
+  duration          String
+  priceRange        String  @map("price_range")
+  inclusions        String
+  operatorType      String  @map("operator_type")
+  verificationNotes String  @map("verification_notes")
+  officialWebsite   String  @map("official_website")
+  sourceConfidence  String  @map("source_confidence")
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("programmes")
+}
