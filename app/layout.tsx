@@ -2,8 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "NextXI - Football & Futsal Academy Directory",
-  description: "Find football and futsal academy programmes across Europe",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://nextxi.io"),
+  title: {
+    default: "NextXI – Football & Futsal Academy Directory",
+    template: "%s – NextXI",
+  },
+  description: "A curated directory of elite football and futsal academies, camps, and development programmes worldwide.",
+  openGraph: {
+    title: "NextXI",
+    description: "A curated directory of elite football and futsal academies, camps, and development programmes worldwide.",
+    siteName: "NextXI",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NextXI",
+    description: "A curated directory of elite football and futsal academies, camps, and development programmes worldwide.",
+  },
 };
 
 export default function RootLayout({
@@ -55,9 +70,10 @@ export default function RootLayout({
             <Link
               href="/programmes"
               style={{
-                color: "#666",
+                color: "#000",
                 textDecoration: "none",
                 fontSize: 14,
+                fontWeight: 500,
               }}
             >
               Programmes

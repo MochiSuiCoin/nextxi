@@ -21,7 +21,7 @@ export default function VerifiedPage() {
       >
         <h2 style={{ marginBottom: 16, fontSize: 20, fontWeight: 600 }}>What Verified means</h2>
         <p style={{ lineHeight: 1.6, margin: 0 }}>
-          Verified listings are reviewed and confirmed with official operators (clubs, academies, or authorised programme providers).
+          Verified listings on NextXI are programmes that have been reviewed and confirmed with official operators—clubs, academies, or authorised programme providers. This designation indicates that the programme information has been validated through direct contact with the organisation.
         </p>
       </div>
 
@@ -34,29 +34,18 @@ export default function VerifiedPage() {
           backgroundColor: "#f9f9f9",
         }}
       >
-        <h2 style={{ marginBottom: 16, fontSize: 20, fontWeight: 600 }}>Benefits</h2>
+        <h2 style={{ marginBottom: 16, fontSize: 20, fontWeight: 600 }}>Benefits of verification</h2>
         <ul style={{ margin: 0, paddingLeft: 20, lineHeight: 1.8 }}>
-          <li style={{ marginBottom: 8 }}>Verified badge on programme cards</li>
-          <li style={{ marginBottom: 8 }}>Higher trust for families and players</li>
-          <li style={{ marginBottom: 8 }}>Priority placement in results</li>
-          <li style={{ marginBottom: 8 }}>Direct enquiry routing (manual for now)</li>
-          <li>Basic performance insights (coming soon)</li>
+          <li style={{ marginBottom: 12 }}>
+            <strong>Trust:</strong> Verified programmes display a badge that signals legitimacy and authenticity to families and players searching for opportunities.
+          </li>
+          <li style={{ marginBottom: 12 }}>
+            <strong>Visibility:</strong> Verified listings receive priority placement in search results, increasing exposure to potential participants.
+          </li>
+          <li style={{ marginBottom: 12 }}>
+            <strong>Credibility:</strong> The verification process confirms official affiliation and operational status, establishing credibility within the NextXI directory.
+          </li>
         </ul>
-      </div>
-
-      <div
-        style={{
-          padding: 24,
-          border: "1px solid #e0e0e0",
-          borderRadius: 8,
-          marginBottom: 32,
-          backgroundColor: "#fff3e0",
-        }}
-      >
-        <h2 style={{ marginBottom: 16, fontSize: 20, fontWeight: 600 }}>Not a guarantee</h2>
-        <p style={{ lineHeight: 1.6, margin: 0 }}>
-          Verified does not guarantee selection, trials, visas, or outcomes.
-        </p>
       </div>
 
       <div
@@ -68,14 +57,17 @@ export default function VerifiedPage() {
           backgroundColor: "white",
         }}
       >
-        <h2 style={{ marginBottom: 16, fontSize: 20, fontWeight: 600 }}>What we need to verify</h2>
+        <h2 style={{ marginBottom: 16, fontSize: 20, fontWeight: 600 }}>Verification process</h2>
+        <p style={{ lineHeight: 1.6, marginBottom: 12 }}>
+          To become verified, programmes must provide:
+        </p>
         <ul style={{ margin: 0, paddingLeft: 20, lineHeight: 1.8 }}>
           <li style={{ marginBottom: 8 }}>Official website URL</li>
-          <li style={{ marginBottom: 8 }}>Official contact email</li>
+          <li style={{ marginBottom: 8 }}>Official contact email address</li>
           <li style={{ marginBottom: 8 }}>
-            Proof of affiliation (e.g., club letter, staff role, or authorised documentation)
+            Documentation confirming affiliation (club letter, staff credentials, or authorised documentation)
           </li>
-          <li>Programme dates/structure and inclusions (if applicable)</li>
+          <li>Programme structure and operational details</li>
         </ul>
       </div>
 
@@ -85,16 +77,16 @@ export default function VerifiedPage() {
           border: "1px solid #e0e0e0",
           borderRadius: 8,
           marginBottom: 32,
-          backgroundColor: "#e3f2fd",
+          backgroundColor: "#f9f9f9",
           textAlign: "center",
         }}
       >
-        <h2 style={{ marginBottom: 16, fontSize: 20, fontWeight: 600 }}>Request verification</h2>
-        <p style={{ marginBottom: 20, lineHeight: 1.6 }}>
-          Ready to get verified? Send us your details and we'll review your programme.
+        <h2 style={{ marginBottom: 16, fontSize: 20, fontWeight: 600 }}>Get started</h2>
+        <p style={{ marginBottom: 24, lineHeight: 1.6 }}>
+          Submit your programme for review. Once accepted, you can request verification status.
         </p>
-        <a
-          href="mailto:info@nextxi.com?subject=NextXI Verified Listing Request"
+        <Link
+          href="/submit"
           style={{
             display: "inline-block",
             padding: "12px 24px",
@@ -106,8 +98,8 @@ export default function VerifiedPage() {
             fontWeight: 500,
           }}
         >
-          Request Verification
-        </a>
+          Submit Programme
+        </Link>
       </div>
 
       <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
@@ -119,16 +111,6 @@ export default function VerifiedPage() {
           }}
         >
           Browse all programmes →
-        </Link>
-        <span style={{ color: "#ccc" }}>|</span>
-        <Link
-          href="/submit"
-          style={{
-            color: "#0070f3",
-            textDecoration: "underline",
-          }}
-        >
-          Submit a programme →
         </Link>
       </div>
     </main>

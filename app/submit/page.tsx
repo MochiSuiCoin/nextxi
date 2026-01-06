@@ -1,8 +1,18 @@
-"use client";
-
 import Link from "next/link";
 
-export default function SubmitPage() {
+interface SearchParams {
+  success?: string;
+  error?: string;
+}
+
+export default async function SubmitPage({
+  searchParams,
+}: {
+  searchParams: Promise<SearchParams>;
+}) {
+  const params = await searchParams;
+  const isSuccess = params.success === "true";
+  const isError = params.error === "true";
   return (
     <main style={{ padding: 40, maxWidth: 800, margin: "0 auto" }}>
       <div style={{ marginBottom: 32 }}>
@@ -22,9 +32,43 @@ export default function SubmitPage() {
         }}
       >
         <p style={{ marginBottom: 16, lineHeight: 1.6 }}>
-          NextXI is a curated directory of football and futsal academies, camps and development programmes. Submissions are reviewed to keep quality high.
+          NextXI is a curated directory of football and futsal academies, camps and development programmes. All submissions are manually reviewed to ensure quality and legitimacy.
         </p>
       </div>
+
+      {isSuccess && (
+        <div
+          style={{
+            padding: 20,
+            border: "1px solid #4caf50",
+            borderRadius: 8,
+            marginBottom: 32,
+            backgroundColor: "#e8f5e9",
+            color: "#2e7d32",
+          }}
+        >
+          <p style={{ margin: 0, fontWeight: 500 }}>
+            ✓ Thank you! Your submission has been received. We'll review it and get back to you soon.
+          </p>
+        </div>
+      )}
+
+      {isError && (
+        <div
+          style={{
+            padding: 20,
+            border: "1px solid #f44336",
+            borderRadius: 8,
+            marginBottom: 32,
+            backgroundColor: "#ffebee",
+            color: "#c62828",
+          }}
+        >
+          <p style={{ margin: 0, fontWeight: 500 }}>
+            There was an error submitting your form. Please try again.
+          </p>
+        </div>
+      )}
 
       <div
         style={{
@@ -37,9 +81,8 @@ export default function SubmitPage() {
       >
         <h2 style={{ marginBottom: 20, fontSize: 20, fontWeight: 600 }}>Programme Information</h2>
         <form
-          action="mailto:info@nextxi.com"
+          action="/api/submit"
           method="post"
-          encType="text/plain"
           style={{ display: "flex", flexDirection: "column", gap: 20 }}
         >
           <div>
@@ -138,15 +181,6 @@ export default function SubmitPage() {
               <select
                 id="country"
                 name="country"
-                onChange={(e) => {
-                  const otherInput = document.getElementById("countryOther");
-                  if (otherInput) {
-                    otherInput.style.display = e.target.value === "Other" ? "block" : "none";
-                    if (e.target.value !== "Other") {
-                      (otherInput as HTMLInputElement).value = "";
-                    }
-                  }
-                }}
                 style={{
                   width: "100%",
                   padding: "10px 12px",
@@ -171,24 +205,39 @@ export default function SubmitPage() {
                 <option value="Brazil">Brazil</option>
                 <option value="Argentina">Argentina</option>
                 <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="Mexico">Mexico</option>
+                <option value="UAE">UAE</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Japan">Japan</option>
+                <option value="South Korea">South Korea</option>
+                <option value="Australia">Australia</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Egypt">Egypt</option>
+                <option value="Poland">Poland</option>
+                <option value="Czech Republic">Czech Republic</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Austria">Austria</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Norway">Norway</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Finland">Finland</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Scotland">Scotland</option>
+                <option value="Wales">Wales</option>
+                <option value="Croatia">Croatia</option>
+                <option value="Serbia">Serbia</option>
+                <option value="Romania">Romania</option>
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Slovakia">Slovakia</option>
+                <option value="Slovenia">Slovenia</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="Russia">Russia</option>
                 <option value="Other">Other</option>
               </select>
-              <input
-                type="text"
-                id="countryOther"
-                name="countryOther"
-                placeholder="Specify country"
-                style={{
-                  width: "100%",
-                  padding: "10px 12px",
-                  border: "1px solid #ccc",
-                  borderRadius: 4,
-                  fontSize: 14,
-                  boxSizing: "border-box",
-                  marginTop: 8,
-                  display: "none",
-                }}
-              />
             </div>
 
             <div>
