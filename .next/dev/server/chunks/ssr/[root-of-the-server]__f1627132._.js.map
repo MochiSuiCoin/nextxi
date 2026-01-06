@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Lenovo/Downloads/AI_Maker_CodeAcademy/nextxi/app/page.tsx"],"sourcesContent":["import Link from \"next/link\";\r\n\r\nexport default function Home() {\r\n  return (\r\n    <main style={{ padding: 40 }}>\r\n      <h1>NextXI</h1>\r\n      <p>A curated directory of elite football and futsal academies, camps, and development programmes worldwide.</p>\r\n      <Link href=\"/programmes\" style={{ display: \"inline-block\", marginTop: 16 }}>\r\n        View Programmes →\r\n      </Link>\r\n    </main>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAK,OAAO;YAAE,SAAS;QAAG;;0BACzB,8OAAC;0BAAG;;;;;;0BACJ,8OAAC;0BAAE;;;;;;0BACH,8OAAC,0LAAI;gBAAC,MAAK;gBAAc,OAAO;oBAAE,SAAS;oBAAgB,WAAW;gBAAG;0BAAG;;;;;;;;;;;;AAKlF"}}]
-}

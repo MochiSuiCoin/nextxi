@@ -1,7 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/programmes/[id]/page": "app/programmes/[id]/page.js",
-  "/programmes/page": "app/programmes/page.js",
-  "/submit/page": "app/submit/page.js",
-  "/verified/page": "app/verified/page.js"
-}
