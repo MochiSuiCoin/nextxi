@@ -8,16 +8,32 @@ export const metadata: Metadata = {
     template: "%s – NextXI",
   },
   description: "A curated directory of elite football and futsal academies, camps, and development programmes worldwide.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "32x32" }],
+  },
   openGraph: {
-    title: "NextXI",
+    title: "NextXI – Football & Futsal Academy Directory",
     description: "A curated directory of elite football and futsal academies, camps, and development programmes worldwide.",
     siteName: "NextXI",
     type: "website",
+    images: [
+      {
+        url: "/brand/nextxi-logo.svg",
+        width: 400,
+        height: 100,
+        alt: "NextXI Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NextXI",
+    title: "NextXI – Football & Futsal Academy Directory",
     description: "A curated directory of elite football and futsal academies, camps, and development programmes worldwide.",
+    images: ["/brand/nextxi-logo.svg"],
   },
 };
 
@@ -48,14 +64,22 @@ export default function RootLayout({
             <Link
               href="/"
               style={{
-                fontSize: 18,
-                fontWeight: 600,
-                color: "#000",
+                display: "flex",
+                alignItems: "center",
                 textDecoration: "none",
                 marginRight: "auto",
+                height: 32,
               }}
             >
-              NextXI
+              <img
+                src="/brand/nextxi-logo.svg"
+                alt="NextXI"
+                height={30}
+                style={{
+                  height: "30px",
+                  width: "auto",
+                }}
+              />
             </Link>
             <Link
               href="/"

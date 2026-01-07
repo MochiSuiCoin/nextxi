@@ -1,0 +1,8 @@
+<svg width="400" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .base { font-family: system-ui, -apple-system, BlinkMacSystemFont, Inter, Segoe UI, Roboto, sans-serif;
+            font-size: 72px; font-weight: 400; fill: #111827; letter-spacing: -0.02em; }
+    .xi { font-weight: 600; fill: #4f46e5; }
+  </style>
+  <text x="0" y="72" class="base">Next<tspan class="xi">XI</tspan></text>
+</svg>

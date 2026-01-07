@@ -68,7 +68,9 @@ export default async function SubmitPage({
           }}
         >
           <p style={{ margin: 0, fontWeight: 500 }}>
-            There was an error submitting your form. Please try again.
+            {params.error === "rate_limit"
+              ? "Too many submissions. Please try again later."
+              : "There was an error submitting your form. Please try again."}
           </p>
         </div>
       )}
@@ -453,6 +455,23 @@ export default async function SubmitPage({
           >
             Selected programmes may be eligible for optional verification or enhanced listing features in the future. Submission does not imply any obligation.
           </p>
+
+          {/* Honeypot field - hidden from users, traps bots */}
+          <input
+            type="text"
+            name="company_website"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              left: "-9999px",
+              width: "1px",
+              height: "1px",
+              opacity: 0,
+              pointerEvents: "none",
+            }}
+          />
 
           <button
             type="submit"
