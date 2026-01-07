@@ -24,15 +24,18 @@ export default async function SubmitPage({
 
       <div
         style={{
-          padding: 20,
+          padding: 24,
           border: "1px solid #e0e0e0",
           borderRadius: 8,
           marginBottom: 32,
-          backgroundColor: "#f9f9f9",
+          backgroundColor: "#f9fafb",
         }}
       >
-        <p style={{ marginBottom: 16, lineHeight: 1.6 }}>
-          NextXI is a curated directory of football and futsal academies, camps and development programmes. All submissions are manually reviewed to ensure quality and legitimacy.
+        <p style={{ marginBottom: 12, lineHeight: 1.6 }}>
+          NextXI curates elite football and futsal academies, camps, and development programmes for international players and families.
+        </p>
+        <p style={{ margin: 0, lineHeight: 1.6 }}>
+          If you represent an academy or programme and would like to be considered for inclusion, you can submit your details below for review.
         </p>
       </div>
 
@@ -69,6 +72,59 @@ export default async function SubmitPage({
           </p>
         </div>
       )}
+
+      {/* What happens after submission */}
+      <div
+        style={{
+          padding: 24,
+          border: "1px solid #e0e0e0",
+          borderRadius: 8,
+          marginBottom: 24,
+          backgroundColor: "white",
+        }}
+      >
+        <h2 style={{ marginBottom: 16, fontSize: 18, fontWeight: 600 }}>What happens after submission</h2>
+        <ul style={{ margin: "0 0 12px 0", paddingLeft: 20, lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 8 }}>
+            We review the information provided for accuracy and relevance
+          </li>
+          <li style={{ marginBottom: 8 }}>
+            We may verify details via your official website or contact email
+          </li>
+          <li style={{ marginBottom: 8 }}>
+            If approved, your programme will be listed on NextXI
+          </li>
+          <li>We may contact you if clarification or updates are required</li>
+        </ul>
+        <p style={{ margin: 0, fontSize: 14, color: "#666" }}>
+          There is no cost to submit a programme.
+        </p>
+      </div>
+
+      {/* What we list */}
+      <div
+        style={{
+          padding: 24,
+          border: "1px solid #e0e0e0",
+          borderRadius: 8,
+          marginBottom: 24,
+          backgroundColor: "white",
+        }}
+      >
+        <h2 style={{ marginBottom: 16, fontSize: 18, fontWeight: 600 }}>What we list</h2>
+        <ul style={{ margin: 0, paddingLeft: 20, lineHeight: 1.8 }}>
+          <li style={{ marginBottom: 8 }}>
+            Run by established academies, clubs, or recognised operators
+          </li>
+          <li style={{ marginBottom: 8 }}>
+            Open to international or non-local players
+          </li>
+          <li style={{ marginBottom: 8 }}>
+            Structured development (academy, camp, or trial format)
+          </li>
+          <li>Official website or verifiable contact details</li>
+        </ul>
+      </div>
 
       <div
         style={{
@@ -387,6 +443,17 @@ export default async function SubmitPage({
             />
           </div>
 
+          <p
+            style={{
+              marginBottom: 20,
+              fontSize: 13,
+              color: "#666",
+              fontStyle: "italic",
+            }}
+          >
+            Selected programmes may be eligible for optional verification or enhanced listing features in the future. Submission does not imply any obligation.
+          </p>
+
           <button
             type="submit"
             style={{
@@ -401,36 +468,9 @@ export default async function SubmitPage({
               alignSelf: "flex-start",
             }}
           >
-            Submit Programme
+            Submit Programme for Review
           </button>
         </form>
-      </div>
-
-      <div
-        style={{
-          padding: 20,
-          border: "1px solid #e0e0e0",
-          borderRadius: 8,
-          marginBottom: 32,
-          backgroundColor: "#f9f9f9",
-        }}
-      >
-        <h2 style={{ marginBottom: 16, fontSize: 18, fontWeight: 600 }}>What happens next</h2>
-        <ul style={{ margin: 0, paddingLeft: 20, lineHeight: 1.8 }}>
-          <li style={{ marginBottom: 8 }}>
-            We review your submission for completeness and legitimacy.
-          </li>
-          <li style={{ marginBottom: 8 }}>
-            If accepted, we'll publish your listing and may request clarification.
-          </li>
-          <li>
-            If you want priority placement and a verified badge, see{" "}
-            <Link href="/verified" style={{ color: "#0070f3", textDecoration: "underline" }}>
-              Verified listings
-            </Link>
-            .
-          </li>
-        </ul>
       </div>
 
       <div style={{ textAlign: "center", marginTop: 32 }}>
