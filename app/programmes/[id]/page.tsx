@@ -17,7 +17,7 @@ function normalizeLevel(level: string | null | undefined): string | null {
   if (!level) return null;
   const normalized = level.trim().toLowerCase();
   if (normalized.includes("elite")) return "Elite";
-  if (normalized.includes("development") || normalized.includes("dev")) return "Development";
+  if (normalized.includes("development") || normalized === "dev") return "Development";
   if (normalized.includes("trial")) return "Trial";
   if (normalized.includes("camp")) return "Camp";
   if (normalized.includes("academy")) return "Other";

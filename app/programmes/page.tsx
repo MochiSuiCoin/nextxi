@@ -620,7 +620,7 @@ export default async function ProgrammesPage({
                             }}
                           >
                             {normalizedSport}
-                          </span>
+                    </span>
                         );
                       }
 
@@ -628,16 +628,16 @@ export default async function ProgrammesPage({
                       const normalizedLevel = normalizeLevel(p.level);
                       if (normalizedLevel && badges.length < 4) {
                         badges.push(
-                          <span
+                    <span
                             key="level"
-                            style={{
+                      style={{
                               ...badgeStyle,
-                              backgroundColor: "#f3e5f5",
-                              color: "#7b1fa2",
-                            }}
-                          >
+                        backgroundColor: "#f3e5f5",
+                        color: "#7b1fa2",
+                      }}
+                    >
                             {normalizedLevel}
-                          </span>
+                    </span>
                         );
                       }
 
@@ -645,14 +645,14 @@ export default async function ProgrammesPage({
                       const normalizedBoarding = normalizeBoarding(p.boarding);
                       if (normalizedBoarding && badges.length < 4) {
                         badges.push(
-                          <span
+                      <span
                             key="boarding"
-                            style={{
+                        style={{
                               ...badgeStyle,
-                              backgroundColor: "#e8f5e9",
-                              color: "#388e3c",
-                            }}
-                          >
+                          backgroundColor: "#e8f5e9",
+                          color: "#388e3c",
+                        }}
+                      >
                             Boarding: {normalizedBoarding}
                           </span>
                         );
@@ -670,7 +670,7 @@ export default async function ProgrammesPage({
                             }}
                           >
                             Verified
-                          </span>
+                      </span>
                         );
                       }
 
