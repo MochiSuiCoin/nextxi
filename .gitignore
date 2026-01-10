@@ -30,3 +30,6 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
+# NextXI design packs
+NextXI_Logo_Pack.zip
+NextXI_Logo_Pack/

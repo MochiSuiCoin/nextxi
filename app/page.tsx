@@ -10,6 +10,7 @@ import {
   Globe,
   CheckCircle,
 } from "lucide-react";
+import EmailCapture from "@/components/EmailCapture";
 
 export default async function Home() {
   // Fetch stats for trust section
@@ -359,6 +360,17 @@ export default async function Home() {
             </p>
           </div>
         </div>
+      </section>
+
+      {/* Email Capture Module */}
+      <section
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "60px 40px",
+        }}
+      >
+        <EmailCapture />
       </section>
 
       {/* Footer */}

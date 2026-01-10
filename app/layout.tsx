@@ -113,6 +113,16 @@ export default function RootLayout({
               Submit
             </Link>
             <Link
+              href="/contact"
+              style={{
+                color: "#666",
+                textDecoration: "none",
+                fontSize: 14,
+              }}
+            >
+              Contact
+            </Link>
+            <Link
               href="/verified"
               style={{
                 color: "#666",
