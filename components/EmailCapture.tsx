@@ -13,10 +13,7 @@ export default function EmailCapture() {
     setErrorMessage("");
 
     try {
-      const formData = new FormData();
-      formData.append("email", email);
-      // Honeypot field (hidden)
-      formData.append("company_website", "");
+      const formData = new FormData(e.currentTarget);
 
       const response = await fetch("/api/newsletter", {
         method: "POST",
@@ -148,6 +145,23 @@ export default function EmailCapture() {
               {errorMessage}
             </div>
           )}
+
+          {/* Honeypot field - hidden from users, traps bots */}
+          <input
+            type="text"
+            name="company_website"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              left: "-9999px",
+              width: "1px",
+              height: "1px",
+              opacity: 0,
+              pointerEvents: "none",
+            }}
+          />
 
           <p
             style={{
